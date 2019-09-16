@@ -90,6 +90,9 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.bg-LightGrey {
+	background-color: #e3e3e3;
+}
 
 .fontshadow {
 	color: white;
