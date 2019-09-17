@@ -112,6 +112,10 @@
 	height: 600px;
 }
 
+.height500px {
+	height: 500px;
+}
+
 .textDiv {
 	position: relative;
 	padding: 1rem;
