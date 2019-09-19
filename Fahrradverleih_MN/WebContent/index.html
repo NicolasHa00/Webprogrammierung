@@ -28,7 +28,6 @@
 	}
 }
 </style>
-<!-- Custom styles for this template -->
 <link href="product.css" rel="stylesheet">
 </head>
 <body>
@@ -93,44 +92,37 @@
 	<footer class="container py-5">
 		<div class="row">
 			<div class="col-12 col-md">
-				<img src="Bicycle2.png" width="28" height="28" fill="none"
-					stroke="currentColor" stroke-linecap="round"
-					stroke-linejoin="round" stroke-width="2" class="d-block mx-auto"
-					role="img" viewBox="0 0 24 24" focusable="false">
-				<circle cx="12" cy="12" r="10" />
-				<path
-					d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-
-				</svg>
-				<small class="d-block mb-3 text-muted">&copy;2019</small>
+				<canvas id="Canvas" width="50" height="50"
+					style="border: 1px solid #d3d3d3;"> </canvas>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Preise</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Unsere Preise</a></li>
+					<li><a class="text-muted" href="http://localhost:8080/Fahrradverleih_MN/preise.html">Unsere Preise</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Verleih</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Unser Fahrradverleih</a></li>
+					<li><a class="text-muted" href="http://localhost:8080/Fahrradverleih_MN/verleih.html">Unser Fahrradverleih</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Unser Fahrradbestand</a></li>
+					<li><a class="text-muted" href="http://localhost:8080/Fahrradverleih_MN/bestand.html">Unser Fahrradbestand</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Kontakt</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Kontaktformular</a></li>
-					<li><a class="text-muted" href="#">Impressum</a></li>
+					<li><a class="text-muted" href="http://localhost:8080/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
+					<li><a class="text-muted" href="http://localhost:8080/Fahrradverleih_MN/kontakt.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>
 	</footer>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
@@ -139,6 +131,7 @@
 				|| document
 						.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
 	</script>
+	<script src="canvas.js"></script>
 	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
 		crossorigin="anonymous"></script>
