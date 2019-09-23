@@ -1,0 +1,363 @@
+.container {
+	max-width: 960px;
+}
+
+.site-header {
+	background-color: rgba(0, 0, 0, .85);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+	color: #999;
+	transition: ease-in-out color .15s;
+}
+
+.site-header a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.bgimg1 {
+	background-image: url("HomePicture.jpg");
+	position: relative;
+	overflow: hidden;
+	padding: 2rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg1::before {
+	background-image: url("HomePicture.jpg");
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg2 {
+	background-image: url("HomePicture2.jpg");
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin-right: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg2::before {
+	background-image: url("HomePicture2.jpg");
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin-right: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg3 {
+	background-image: url("HomePicture4.jpg");
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin-right: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg3::before {
+	background-image: url("HomePicture4.jpg");
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin-right: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.bg-lightGrey {
+	background-color: #f3f3f3;
+}
+
+.font-bold {
+	font-weight: 500;
+	font-size: 1.25rem;
+}
+
+.fontshadow {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.largeMargin {
+	margin-bottom: 1rem !important;
+	margin-top: 2rem !important;
+	padding-left: 2rem !important;
+	padding-right: 2rem !important;
+}
+
+.height600px {
+	height: 600px;
+}
+
+.height500px {
+	height: 500px;
+}
+
+.textDiv {
+	position: relative;
+	padding: 1rem;
+	margin: 1rem;
+	text-align: center;
+}
+
+@import
+	url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css)
+	;
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800)
+	;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:800);
+
+.snip1214 {
+	font-family: 'Raleway', Arial, sans-serif;
+	color: #000000;
+	text-align: center;
+	font-size: 16px;
+	width: 100%;
+	margin: 40px 10px;
+}
+
+.snip1214 .plan {
+	margin: 0;
+	width: 33.33%;
+	position: relative;
+	float: left;
+	background-color: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.snip1214 * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.snip1214 header {
+	position: relative;
+}
+
+.snip1214 .plan-title {
+	position: relative;
+	top: 0;
+	font-weight: 800;
+	padding: 5px 15px;
+	margin: 0 auto;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin: 0;
+	display: inline-block;
+	background-color: #222f3d;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.snip1214 .plan-cost {
+	padding: 0px 10px 20px;
+}
+
+.snip1214 .plan-price {
+	font-family: 'Montserrat', Arial, sans-serif;
+	font-weight: 800;
+	font-size: 2.4em;
+	color: #34495e;
+}
+
+.snip1214 .plan-type {
+	opacity: 0.6;
+}
+
+.snip1214 .plan-features {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	list-style: outside none none;
+	font-size: 0.8em;
+}
+
+.snip1214 .plan-features li {
+	border-top: 1px solid #d2d7e2;
+	padding: 10px 5%;
+}
+
+.snip1214 .plan-features li:nth-child(even) {
+	background: rgba(0, 0, 0, 0.08);
+}
+
+.snip1214 .plan-features i {
+	margin-right: 8px;
+	opacity: 0.4;
+}
+
+.snip1214 .plan-select {
+	border-top: 1px solid #d2d7e2;
+	padding: 10px 10px 0;
+}
+
+.snip1214 .plan-select a {
+	background-color: #222f3d;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	-webkit-transform: translateY(50%);
+	transform: translateY(50%);
+	font-weight: 800;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.snip1214 .plan-select a:hover {
+	background-color: #46627f;
+}
+
+.snip1214 .featured {
+	margin-top: -10px;
+	background-color: #34495e;
+	color: #ffffff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	z-index: 1;
+}
+
+.snip1214 .featured .plan-title, .snip1214 .featured .plan-price {
+	color: #ffffff;
+}
+
+.snip1214 .featured .plan-cost {
+	padding: 10px 10px 20px;
+}
+
+.snip1214 .featured .plan-features li {
+	border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.snip1214 .featured .plan-select {
+	padding: 20px 10px 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+@media only screen and (max-width: 767px) {
+	.snip1214 .plan {
+		width: 50%;
+	}
+	.snip1214 .plan-title, .snip1214 .plan-select a {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	.snip1214 .plan-cost, .snip1214 .featured .plan-cost {
+		padding: 20px 10px 20px;
+	}
+	.snip1214 .plan-select, .snip1214 .featured .plan-select {
+		padding: 10px 10px 10px;
+	}
+	.snip1214 .featured {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	.snip1214 .plan {
+		width: 100%;
+	}
+}
+
+.margin-header {
+	margin-bottom: 5rem;
+}
+
+/*
+ * Extra utilities
+ */
+.flex-equal>* {
+	-ms-flex: 1;
+	flex: 1;
+}
+
+@media ( min-width : 768px) {
+	.flex-md-equal>* {
+		-ms-flex: 1;
+		flex: 1;
+	}
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
