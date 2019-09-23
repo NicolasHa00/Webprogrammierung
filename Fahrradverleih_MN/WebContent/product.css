@@ -133,7 +133,9 @@
 	margin: 1rem;
 	text-align: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .bgimg8 {
@@ -145,7 +147,9 @@
 	margin: 1rem;
 	text-align: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .bgimg9 {
@@ -157,7 +161,9 @@
 	margin: 1rem;
 	text-align: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .bgimg10 {
@@ -169,19 +175,23 @@
 	margin: 1rem;
 	text-align: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .bgimg11 {
 	background-image: url("Mountainbike.png");
 	height: 500px;
-	position: relative;
+	background-position: 50% 50%;
 	overflow: hidden;
 	padding: 3rem;
 	margin: 1rem;
 	text-align: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .bigDiv {
@@ -250,6 +260,14 @@
 	padding-bottom: 0rem !important;
 	margin: 1rem;
 	text-align: center;
+}
+
+.textDiv3 {
+	position: relative;
+	padding: 0rem;
+	margin: 1rem;
+	text-align: center;
+	width: 50%;
 }
 
 .fontWhite {
