@@ -87,6 +87,43 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+.bgimg4 {
+	background-image: url("ContactPicture.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin-right: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg5 {
+	background-image: url("ContactPicture2.jpg");
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin-right: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bigDiv {
+	background-color: white;
+	height: 550px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	padding-top: 1rem !important;
+	margin: 0rem;
+	text-align: center;
+	width: 100%;
+}
+
 .bg-lightGrey {
 	background-color: #f3f3f3;
 }
@@ -96,8 +133,8 @@
 	font-size: 1.25rem;
 }
 
-.fontshadow {
-	color: white;
+.fontShadow {
+	color: white !important;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -106,6 +143,14 @@
 	margin-top: 2rem !important;
 	padding-left: 2rem !important;
 	padding-right: 2rem !important;
+}
+
+.topMargin {
+	margin-top: 0.5rem !important;
+}
+
+.topPadding {
+	padding-top: 0rem !important;
 }
 
 .height600px {
@@ -121,6 +166,18 @@
 	padding: 1rem;
 	margin: 1rem;
 	text-align: center;
+}
+
+.textDiv2 {
+	position: relative;
+	padding: 1rem;
+	padding-bottom: 0rem !important;
+	margin: 1rem;
+	text-align: center;
+}
+
+.fontWhite {
+	color: white !important;
 }
 
 @import
