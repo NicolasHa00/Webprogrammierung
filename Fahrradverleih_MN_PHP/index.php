@@ -11,8 +11,7 @@ if (isset($_GET['logout'])) {
     header("location: login.php");
 }
 ?>
-<!DOCTYPE html>
-<html>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,6 +45,7 @@ if (isset($_GET['logout'])) {
 </style>
 <!-- Custom styles for this template -->
 <link href="product.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -101,18 +101,18 @@ if (isset($_GET['logout'])) {
 			<a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a>
 			<a class="py-2 d-none d-md-inline-block"
-				href="/index.php">Login/Registrierung</a>
+				href="/index.php">Abmelden</a>
 		</div>
 	</nav>
 	
 	<div class="bgimg1 height500px">
 		<div class="col-md-5 p-lg-5 mx-auto my-5">
-			<h1 class="display-4 font-weight-normal"><p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p></h1>
+			<h1 class="display-4 font-weight-normal"><p>Willkommen <strong><?php echo $_SESSION['username']; ?></strong></p></h1>
 			<p class="lead font-weight-normal">Treten sie der Welt des Bikesharing bei!</p>
 			<a class="btn btn-outline-secondary"
 				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
 				<a class="btn btn-outline-secondary"
-				href="index.php?logout='1'">Logout</a>
+				href="index.php?logout='1'">Abmelden</a>
 		</div>
 	</div>
 	
@@ -141,30 +141,39 @@ if (isset($_GET['logout'])) {
 			<div class="col-6 col-md">
 				<h5>Preise</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Unsere Preise</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/preise.html">Unsere
+							Preise</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Verleih</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Unser Fahrradverleih</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/verleih.html">Unser
+							Fahrradverleih</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Unser Fahrradbestand</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/bestand.html">Unser
+							Fahrradbestand</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Kontakt</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Kontaktformular</a></li>
-					<li><a class="text-muted" href="#">Impressum</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/kontakt.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>
 	</footer>
+	
 	<script src="canvas.js"></script>
 </body>
 </html>

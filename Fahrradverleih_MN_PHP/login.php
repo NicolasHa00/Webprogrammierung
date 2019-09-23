@@ -135,30 +135,39 @@
 			<div class="col-6 col-md">
 				<h5>Preise</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Unsere Preise</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/preise.html">Unsere
+							Preise</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Verleih</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Unser Fahrradverleih</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/verleih.html">Unser
+							Fahrradverleih</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Unser Fahrradbestand</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/bestand.html">Unser
+							Fahrradbestand</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Kontakt</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Kontaktformular</a></li>
-					<li><a class="text-muted" href="#">Impressum</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
+					<li><a class="text-muted"
+						href="http://localhost/Fahrradverleih_MN/kontakt.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>
 	</footer>
+
 	<script src="canvas.js"></script>
 </body>
 </html>
