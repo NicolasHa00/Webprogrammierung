@@ -54,11 +54,41 @@ if (isset($_GET['logout'])) {
 		<div
 			class="container d-flex flex-column flex-md-row justify-content-between">
 			<a class="lead py-2 d-md-inline-block" href="#">Fahrradverleih MN</a>
-			<a class="py-2" href="#"> <img src="Bicycle.png" width="28"
-				height="28" fill="none" stroke="currentColor" stroke-linecap="round"
-				stroke-linejoin="round" stroke-width="2" class="d-block mx-auto"
-				role="img" viewBox="0 0 24 24" focusable="false">
-				<title>Navigation Bar</title> </img>
+			<a class="py-2" href="#"><svg height="25" width="30" fill="white"
+					class="d-block mx-auto" viewBox="0 0 25 30" focusable="false">
+					<defs>
+   						<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+  					    <stop offset="0%"
+						style="stop-color:rgb(255,255,0);stop-opacity:1" />
+    			  		<stop offset="100%"
+						style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    					</linearGradient>
+  					</defs>
+					 <circle cx="7" cy="20" r="5" stroke="white" stroke-width="1"
+						fill="url(#grad1)" />
+					  <circle cx="23" cy="20" r="5" stroke="white" stroke-width="1"
+						fill="url(#grad1)" />
+						<line x1="7" y1="20" x2="10" y2="14"
+						style="stroke:rgb(255,255,255);stroke-width:1" />
+						<line x1="23" y1="20" x2="20" y2="14"
+						style="stroke:rgb(255,255,255);stroke-width:1" />
+						<line x1="10" y1="14" x2="20" y2="14"
+						style="stroke:rgb(255,255,255);stroke-width:1" />
+						<line x1="10" y1="14" x2="15" y2="20"
+						style="stroke:rgb(255,255,255);stroke-width:1" />
+						<line x1="20" y1="14" x2="15" y2="20"
+						style="stroke:rgb(255,255,255);stroke-width:1" />
+						<line x1="10" y1="14" x2="10" y2="11"
+						style="stroke:rgb(255,255,255);stroke-width:1" />
+						<line x1="20" y1="14" x2="20" y2="12"
+						style="stroke:rgb(255,255,255);stroke-width:1" />
+						<line x1="20" y1="12" x2="22" y2="12"
+						style="stroke:rgb(255,255,255);stroke-width:1" />
+						<line x1="22" y1="12" x2="22" y2="10"
+						style="stroke:rgb(255,255,255);stroke-width:1" />
+					<ellipse cx="10" cy="10" rx="1.5" ry="0.8"
+						style="fill:url(#grad1);stroke:white;stroke-width:1" />
+				</svg> 
 
 			</a> <a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN">Home</a> <a
@@ -105,16 +135,8 @@ if (isset($_GET['logout'])) {
 <footer class="container py-5">
 		<div class="row">
 			<div class="col-12 col-md">
-				<img src="Bicycle2.png" width="28" height="28" fill="none"
-					stroke="currentColor" stroke-linecap="round"
-					stroke-linejoin="round" stroke-width="2" class="d-block mx-auto"
-					role="img" viewBox="0 0 24 24" focusable="false">
-				<circle cx="12" cy="12" r="10" />
-				<path
-					d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-
-				</svg>
-				<small class="d-block mb-3 text-muted">&copy;2019</small>
+				<canvas id="Canvas" width="50" height="50"
+					style="border: 1px solid #d3d3d3;"> </canvas>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Preise</h5>
@@ -143,6 +165,6 @@ if (isset($_GET['logout'])) {
 			</div>
 		</div>
 	</footer>
-		
+	<script src="canvas.js"></script>
 </body>
 </html>
