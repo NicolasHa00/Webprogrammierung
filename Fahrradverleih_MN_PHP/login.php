@@ -32,6 +32,7 @@
 </style>
 <!-- Custom styles for this template -->
 <link href="product.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -57,13 +58,13 @@
 			<a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a>
 			<a class="py-2 d-none d-md-inline-block"
-				href="/index.php">Login/Registrierung</a>
+				href="/index.php">Anmelden</a>
 		</div>
 	</nav>
 	
 	<div class="bgimg1 height500px">
 		<div class="col-md-5 p-lg-5 mx-auto my-5">
-			<h1 class="display-4 font-weight-normal">Login/Registration</h1>
+			<h1 class="display-4 font-weight-normal">Anmelden</h1>
 			<p class="lead font-weight-normal">Treten sie der Welt des Bikesharing bei!</p>
 			<a class="btn btn-outline-secondary"
 				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
@@ -80,18 +81,18 @@
   <form method="post" action="login.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
-  		<label>Username</label>
+  		<label>Benutzername</label>
   		<input type="text" name="username" >
   	</div>
   	<div class="input-group">
-  		<label>Password</label>
+  		<label>Passwort</label>
   		<input type="password" name="password">
   	</div>
   	<div class="input-group">
-  		<button type="submit" class="btn" name="login_user">Login</button>
+  		<button type="submit" class="btn" name="login_user">Anmelden</button>
   	</div>
   	<p>
-  		Not yet a member? <a href="register.php">Sign up</a>
+  		Noch kein Mitglied? <a href="register.php">Registrieren</a>
   	</p>
   </form>
 

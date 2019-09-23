@@ -32,6 +32,7 @@
 </style>
 <!-- Custom styles for this template -->
 <link href="product.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 
 </head>
 
@@ -59,13 +60,13 @@
 			<a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a>
 			<a class="py-2 d-none d-md-inline-block"
-				href="/index.php">Login/Registrierung</a>
+				href="/index.php">Anmelden</a>
 		</div>
 	</nav>
 	
 	<div class="bgimg1 height500px">
 		<div class="col-md-5 p-lg-5 mx-auto my-5">
-			<h1 class="display-4 font-weight-normal">Login/Registration</h1>
+			<h1 class="display-4 font-weight-normal">Registrieren</h1>
 			<p class="lead font-weight-normal">Treten sie der Welt des Bikesharing bei!</p>
 			<a class="btn btn-outline-secondary"
 				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
@@ -74,13 +75,13 @@
 
 
   <div class="header">
-  	<h2>Register</h2>
+  	<h2>Registrieren</h2>
   </div>
 	
   <form method="post" action="register.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
-  	  <label>Username</label>
+  	  <label>Benutzername</label>
   	  <input type="text" name="username" value="<?php echo $username; ?>">
   	</div>
   	<div class="input-group">
@@ -88,18 +89,18 @@
   	  <input type="email" name="email" value="<?php echo $email; ?>">
   	</div>
   	<div class="input-group">
-  	  <label>Password</label>
+  	  <label>Passwort</label>
   	  <input type="password" name="password_1">
   	</div>
   	<div class="input-group">
-  	  <label>Confirm password</label>
+  	  <label>Passwort bestätigen</label>
   	  <input type="password" name="password_2">
   	</div>
   	<div class="input-group">
-  	  <button type="submit" class="btn" name="reg_user">Register</button>
+  	  <button type="submit" class="btn" name="reg_user">Registrieren</button>
   	</div>
   	<p>
-  		Already a member? <a href="login.php">Sign in</a>
+  		Bereits Mitglied? <a href="login.php">Anmelden</a>
   	</p>
   </form>
   
