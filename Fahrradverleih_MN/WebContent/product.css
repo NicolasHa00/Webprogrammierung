@@ -146,7 +146,11 @@
 }
 
 .topMargin {
-	margin-top: 3rem !important;
+	margin-top: 0.5rem !important;
+}
+
+.topPadding {
+	padding-top: 0rem !important;
 }
 
 .height600px {
