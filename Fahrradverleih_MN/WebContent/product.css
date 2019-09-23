@@ -112,6 +112,78 @@
 	background-size: cover;
 }
 
+.bgimg6 {
+	background-image: url("VerleihPicture.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg7 {
+	background-image: url("Herrenrad.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg8 {
+	background-image: url("Damenrad.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg9 {
+	background-image: url("Kinderrad.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg10 {
+	background-image: url("EBike.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg11 {
+	background-image: url("Mountainbike.png");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .bigDiv {
 	background-color: white;
 	height: 550px;
@@ -147,6 +219,10 @@
 
 .topMargin {
 	margin-top: 0.5rem !important;
+}
+
+.topMargin2 {
+	margin-top: 1rem !important;
 }
 
 .topPadding {
