@@ -12,11 +12,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.ResultSet;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.Vector;
-import java.sql.Date;
 
 /**
  * Servlet implementation class Servlet_JDBC_Connection
@@ -47,15 +42,17 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 		}
 	}
 
-	public void deleteRow(String name) {
+	public void bestandUpdate(int anzahl, int id) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(connectionURL);
-			PreparedStatement st = conn.prepareStatement("DELETE FROM Table WHERE name = ?");
-			st.setString(1, name);
-			st.executeUpdate();
+			String update = "UPDATE fahrradbestand SET anzahl = ? WHERE id = ?";
+			PreparedStatement prepSt = conn.prepareStatement(update);
+			prepSt.setInt(1, anzahl);
+			prepSt.setInt(2, id);
+			prepSt.executeUpdate();
 			conn.commit();
-			System.out.println("Zeile erfolgreich gelöscht!");
+			System.out.println("Anzahl erfolgreich geupdated!");
 			conn.close();
 
 		} catch (Exception e) {
@@ -64,11 +61,17 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 		}
 	}
 
-	public void addRow(String name) {
+	public void verleihUpdate(int anzahl, int id) {
 		try {
+			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(connectionURL);
-			Statement st = conn.createStatement();
-			st.executeUpdate("INSERT INTO Customers " + "VALUES (1001, 'Simpson', 'Mr.', 'Springfield', 2001)");
+			String update = "UPDATE verliehen SET anzahl = ? WHERE id = ?";
+			PreparedStatement prepSt = conn.prepareStatement(update);
+			prepSt.setInt(1, anzahl);
+			prepSt.setInt(2, id);
+			prepSt.executeUpdate();
+			conn.commit();
+			System.out.println("Anzahl erfolgreich geupdated!");
 			conn.close();
 
 		} catch (Exception e) {
