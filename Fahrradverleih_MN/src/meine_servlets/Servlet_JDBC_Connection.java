@@ -102,8 +102,15 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		getMySQLConnection("localhost", "fahrradverleih_mn", "root", "");
 		doGet(request, response);
+		String idString = request.getParameter("id");
+		String anzahlString = request.getParameter("anzahl");
+		int id = Integer.parseInt(idString);
+		int anzahl = Integer.parseInt(anzahlString);
+		bestandUpdate(anzahl, id);
+		
+		
+		
 	}
 
 }
