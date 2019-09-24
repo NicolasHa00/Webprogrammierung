@@ -5,4 +5,4 @@ function bestandsupdate(id) {
 	}, function(id) {
 		alert("Das Fahrrad mit der ID " + id + "wurde erfolgreich ausgeliehen!");
 	});
-};
+}
