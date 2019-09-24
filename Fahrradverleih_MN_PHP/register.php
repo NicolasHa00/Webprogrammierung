@@ -99,7 +99,7 @@
 		<div class="col-md-5 p-lg-5 mx-auto my-5">
 			<h1 class="display-4 font-weight-normal">Registrieren</h1>
 			<p class="lead font-weight-normal">Treten sie der Welt des Bikesharing bei!</p>
-			<a class="btn btn-outline-secondary"
+			<a class="btn2 btn22-outline-secondary"
 				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
 		</div>
 	</div>
@@ -128,7 +128,7 @@
   	  <input type="password" name="password_2" required minlength="8">
   	</div>
   	<div class="input-group">
-  	  <button type="submit" class="btn" name="reg_user">Registrieren</button>
+  	  <button type="submit" class="btn btn-outline-secondary" name="reg_user">Registrieren</button>
   	</div>
   	<p>
   		Bereits Mitglied? <a href="login.php">Anmelden</a>

@@ -52,6 +52,7 @@ if (isset($_POST['reg_user'])) {
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
         header('location: index.php');
+        setcookie("TestCookie", $value);
     }
 }
 
@@ -75,7 +76,9 @@ if (isset($_POST['login_user'])) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
             header('location: index.php');
-        }else {
+            setcookie("UsernameCookie", $username, time()+86400);
+        }
+        else {
             array_push($errors, "Wrong username/password combination");
         }
     }

@@ -93,8 +93,8 @@
 	</nav>
 
 	<div class="bgimg1 height500px">
-		<div class="col-md-5 p-lg-5 mx-auto my-5">
-			<h1 class="display-4 font-weight-normal">Anmelden</h1>
+		<div class="col-md-5 p-lg-4 mx-auto margin-header">
+			<h1 class="display-5">Anmelden</h1>
 			<p class="lead font-weight-normal">Treten sie der Welt des
 				Bikesharing bei!</p>
 			<a class="btn btn-outline-secondary"
@@ -112,13 +112,17 @@
 	<form method="post" action="login.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
-			<label>Benutzername</label> <input type="text" name="username">
+			<label>Benutzername</label> <input 
+			value="<?php if(isset($_COOKIE["UsernameCookie"])) { echo $_COOKIE["UsernameCookie"]; } ?>" 
+			type="text"
+			name="username"
+			>
 		</div>
 		<div class="input-group">
 			<label>Passwort</label> <input type="password" name="password">
 		</div>
 		<div class="input-group">
-			<button type="submit" class="btn" name="login_user">Anmelden</button>
+			<button type="submit" class="btn2" name="login_user">Anmelden</button>
 		</div>
 		<p>
 			Noch kein Mitglied? <a href="register.php">Registrieren</a>
