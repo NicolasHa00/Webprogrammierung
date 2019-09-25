@@ -77,7 +77,7 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(connectionURL);
 			int anzahl = 0;
-			String command = "SELECT anzahl FROM fahrradbestand WHERE id = ?";
+			String command = "SELECT anzahl FROM verliehen WHERE id = ?";
 			PreparedStatement prepSt = conn.prepareStatement(command);
 			prepSt.setInt(1, id); 
 			ResultSet rs = prepSt.executeQuery();
