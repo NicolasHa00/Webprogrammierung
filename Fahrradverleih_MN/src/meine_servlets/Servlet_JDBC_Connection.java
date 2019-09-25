@@ -53,7 +53,7 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 			PreparedStatement prepSt = conn.prepareStatement(command);
 			prepSt.setInt(1, id);
 			ResultSet rs = prepSt.executeQuery();
-			while(rs.next()) {
+			while (rs.next()) {
 				anzahl = rs.getInt(1);
 			}
 			System.out.println("Die Anzahl ist: " + anzahl);
@@ -79,9 +79,9 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 			int anzahl = 0;
 			String command = "SELECT anzahl FROM verliehen WHERE id = ?";
 			PreparedStatement prepSt = conn.prepareStatement(command);
-			prepSt.setInt(1, id); 
+			prepSt.setInt(1, id);
 			ResultSet rs = prepSt.executeQuery();
-			while(rs.next()) {
+			while (rs.next()) {
 				anzahl = rs.getInt(1);
 			}
 			System.out.println("Die Anzahl ist: " + anzahl);
@@ -107,11 +107,14 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	/*	response.getWriter().append("Served at: ").append(request.getContextPath());
-		PrintWriter out = response.getWriter();
-		String contextParameterName = "anfangswert01";
-		String contextParameterWert = this.getInitParameter(contextParameterName);
-		out.println("Der Context-Parameter " + contextParameterName + " hat den Wert " + contextParameterWert + "."); */
+		/*
+		 * response.getWriter().append("Served at: ").append(request.getContextPath());
+		 * PrintWriter out = response.getWriter(); String contextParameterName =
+		 * "anfangswert01"; String contextParameterWert =
+		 * this.getInitParameter(contextParameterName);
+		 * out.println("Der Context-Parameter " + contextParameterName +
+		 * " hat den Wert " + contextParameterWert + ".");
+		 */
 		getMySQLConnection("localhost", "fahrradverleih_mn", "root", "");
 	}
 
@@ -127,9 +130,7 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 		int id = Integer.parseInt(idString);
 		bestandUpdate(id);
 		verleihUpdate(id);
-		
-		
-		
+
 	}
 
 }
