@@ -1,8 +1,7 @@
 function bestandsupdate(id) {
-	$.post("/Servlet_JDBC_Connection", {
-		anzahl : 1,
+	$.post("Servlet_JDBC_Connection", {
 		id : id
-	}, function(id) {
-		alert("Das Fahrrad mit der ID " + id + "wurde erfolgreich ausgeliehen!");
+	}, function() {
+		alert("Das Fahrrad mit der ID " + id + " wurde erfolgreich ausgeliehen! Sie können es nun einfach an einem Standort abholen. Hierbei entscheidet sich dann auch die Preisklasse.");
 	});
 }
