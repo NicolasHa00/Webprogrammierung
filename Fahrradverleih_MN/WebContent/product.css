@@ -112,6 +112,88 @@
 	background-size: cover;
 }
 
+.bgimg6 {
+	background-image: url("VerleihPicture.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg7 {
+	background-image: url("Herrenrad.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.bgimg8 {
+	background-image: url("Damenrad.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.bgimg9 {
+	background-image: url("Kinderrad.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.bgimg10 {
+	background-image: url("EBike.jpg");
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.bgimg11 {
+	background-image: url("Mountainbike.png");
+	height: 500px;
+	background-position: 50% 50%;
+	overflow: hidden;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-style: solid;
+	border-width: 1px;
+}
+
 .bigDiv {
 	background-color: white;
 	height: 550px;
@@ -149,6 +231,10 @@
 	margin-top: 0.5rem !important;
 }
 
+.topMargin2 {
+	margin-top: 1rem !important;
+}
+
 .topPadding {
 	padding-top: 0rem !important;
 }
@@ -174,6 +260,14 @@
 	padding-bottom: 0rem !important;
 	margin: 1rem;
 	text-align: center;
+}
+
+.textDiv3 {
+	position: relative;
+	padding: 0rem;
+	margin: 1rem;
+	text-align: center;
+	width: 50%;
 }
 
 .fontWhite {
