@@ -1,15 +1,15 @@
 <?php
 session_start();
 
-// initializing variables
 $username = "";
 $email    = "";
 $errors = array();
 
-// connect to the database
+// connect to database
 $db = mysqli_connect('localhost', 'root', '', 'fahrradverleih_mn');
 
-// REGISTER USER
+// REGISTER
+
 if (isset($_POST['reg_user'])) {
     // receive all input values from the form
     $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -17,7 +17,7 @@ if (isset($_POST['reg_user'])) {
     $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
     $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
     
-    // form validation: ensure that the form is correctly filled ...
+    // form validation: ensure that the form is correctly filled 
     // by adding (array_push()) corresponding error unto $errors array
     if (empty($username)) { array_push($errors, "Username is required"); }
     if (empty($email)) { array_push($errors, "Email is required"); }
@@ -42,9 +42,10 @@ if (isset($_POST['reg_user'])) {
         }
     }
     
-    // Finally, register user if there are no errors in the form
+    // Register user
     if (count($errors) == 0) {
-        $password = md5($password_1);//encrypt the password before saving in the database
+        $password = md5($password_1);
+        //encrypt
         
         $query = "INSERT INTO users (username, email, password)
   			  VALUES('$username', '$email', '$password')";
@@ -52,11 +53,11 @@ if (isset($_POST['reg_user'])) {
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
         header('location: index.php');
-        setcookie("TestCookie", $value);
     }
 }
 
-// LOGIN USER
+// LOGIN
+
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($db, $_POST['username']);
     $password = mysqli_real_escape_string($db, $_POST['password']);

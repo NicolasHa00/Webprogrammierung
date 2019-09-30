@@ -6,7 +6,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
-<title>Login</title>
+<title>Anmelden</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -106,7 +106,7 @@
 
 
 	<div class="header">
-		<h2>Login</h2>
+		<h2>Anmelden</h2>
 	</div>
 
 	<form method="post" action="login.php">
@@ -124,10 +124,12 @@
 		<div class="input-group">
 			<button type="submit" class="btn2" name="login_user">Anmelden</button>
 		</div>
-		<p>
+		 <input type="checkbox" name="test" checked> 
+			<p>
 			Noch kein Mitglied? <a href="register.php">Registrieren</a>
 		</p>
 	</form>
+	
 
 
 	<footer class="container py-5">
@@ -171,7 +173,6 @@
 			</div>
 		</div>
 	</footer>
-
 	<script src="canvas.js"></script>
 </body>
 </html>
