@@ -113,31 +113,31 @@
 			<tr>
 				<td>1</td>
 				<td>Herrenrad</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
 			</tr>
 			 <jsp:setProperty name="Bean1" property="id" value="2"/> 
 			<tr>
 				<td>2</td>
 				<td>Damenrad</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
 			</tr>
 			 <jsp:setProperty name="Bean1" property="id" value="3"/> 
 			<tr>
 				<td>3</td>
 				<td>Kinderrad</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
 			</tr>
 			 <jsp:setProperty name="Bean1" property="id" value="4"/> 
 			<tr>
 				<td>4</td>
 				<td>Mountainbike</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
 			</tr>
 			 <jsp:setProperty name="Bean1" property="id" value="5"/> 
 			<tr>
 				<td>5</td>
 				<td>E-Bike</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
 			</tr>
 		</table>
 	</div>
