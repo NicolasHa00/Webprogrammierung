@@ -1,8 +1,22 @@
 function bestandsupdate(id) {
-	$.post("/Servlet_JDBC_Connection", {
-		anzahl : 1,
+	var div = "";
+	var bool = "";
+	var text1 = "Das Fahrrad wurde erfolgreich ausgeliehen! Sie können es nun einfach an einem Standort abholen. Hierbei entscheidet sich dann auch die Preisklasse.";
+	var text2 = "Das Fahrrad konnte nicht ausgeliehen werden, da keines mehr verfügbar ist! Wählen Sie ein anderes Modell.";
+
+	$.post("Servlet_JDBC_Connection", {
 		id : id
-	}, function(id) {
-		alert("Das Fahrrad mit der ID " + id + "wurde erfolgreich ausgeliehen!");
+	}, function(verleihString) {
+		div = verleihString.slice(0,1);
+		console.log("ID ist: " + div);
+		bool = verleihString.slice(1);
+		console.log("ErlaubeVerleih ist: " + bool);
+		
+		var container = document.getElementById(div);
+		if (bool == "true") {
+			container.innerHTML = text1;
+		} else {
+			container.innerHTML = text2;
+		}
 	});
 }
