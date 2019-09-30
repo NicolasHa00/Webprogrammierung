@@ -12,7 +12,6 @@ function bestandsupdate(id) {
 		bool = verleihString.slice(1);
 		console.log("ErlaubeVerleih ist: " + bool);
 		
-
 		var container = document.getElementById(div);
 		if (bool == "true") {
 			container.innerHTML = text1;
