@@ -1,4 +1,9 @@
-<?php include('server.php') ?>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<jsp:useBean id="Bean1" class="meine_servlets.Bean" scope="page">
+   <jsp:setProperty name="Bean1" property="id" value="1"/> 
+</jsp:useBean>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,13 +11,12 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
-<title>Registrierung</title>
+<title>Fahrradverleih MN</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
-
 
 <style>
 .bd-placeholder-img {
@@ -30,22 +34,17 @@
 	}
 }
 </style>
-<!-- Custom styles for this template -->
 <link href="product.css" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
-
 </head>
-
-
 <body>
-
-<nav class="site-header sticky-top py-1">
+	<nav class="site-header sticky-top py-1">
 		<div
 			class="container d-flex flex-column flex-md-row justify-content-between">
-			<a class="lead py-2 d-md-inline-block" href="#">Fahrradverleih MN</a>
-			<a class="py-2" href="#"> 	
-			<svg height="25" width="30" fill="white"
-					class="d-block mx-auto" viewBox="0 0 25 30" focusable="false">
+			<a class="lead py-2 d-md-inline-block"
+				href="http://localhost:8080/Fahrradverleih_MN">Fahrradverleih MN</a>
+			<a class="py-2" href="#"> <svg height="25" width="30"
+					fill="white" class="d-block mx-auto" viewBox="0 0 25 30"
+					focusable="false">
 					<defs>
    						<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
   					    <stop offset="0%"
@@ -79,63 +78,77 @@
 					<ellipse cx="10" cy="10" rx="1.5" ry="0.8"
 						style="fill:url(#grad1);stroke:white;stroke-width:1" />
 				</svg>
-
 			</a> <a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN">Home</a> <a
-				class="py-2 d-none d-md-inline-block" 
-				href="http://localhost/Fahrradverleih_MN/preise.html">Preise</a> <a
+				class="py-2 d-none d-md-inline-block" href="http://localhost/Fahrradverleih_MN/preise.html">Preise</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a>
-			<a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/bestand.jsp">Bestand</a>
-			<a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a>
-			<a class="py-2 d-none d-md-inline-block"
-				href="/index.php">Anmelden</a>
+				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="#">Bestand</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a> <a
+				class="py-2 d-none d-md-inline-block" href="../index.php">Anmelden</a>
 		</div>
 	</nav>
-	
-	<div class="bgimg1 height500px">
-		<div class="col-md-5 p-lg-5 mx-auto my-5">
-			<h1 class="display-4 font-weight-normal">Registrieren</h1>
-			<p class="lead font-weight-normal">Treten sie der Welt des Bikesharing bei!</p>
-			<a class="btn2 btn22-outline-secondary"
-				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
+
+	<div class="bgimg12 height600px">
+		<div class="col-md-5 p-lg-5 mx-auto my-5 topPadding topMargin2">
+			<h1 class="display-4 font-weight-normal">Unser Fahrradbestand</h1>
+			<p class="lead font-weight-normal">Informieren Sie sich hier über
+				unsere verfügbaren Fahrradmodelle, die aktuell zum Ausleihen zur
+				Verfügung stehen.</p>
+			<a class="btn btn-outline-secondary"
+				href="http://localhost/Fahrradverleih_MN/verleih.html">Zum
+				Verleih</a>
 		</div>
 	</div>
 
+	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 largeMargin">
+		<table id="Bestandstabelle">
+			<tr>
+				<th>ID</th>
+				<th>Fahrradmodell</th>
+				<th>verfügbarer Bestand</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Herrenrad</td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+			</tr>
+			 <jsp:setProperty name="Bean1" property="id" value="2"/> 
+			<tr>
+				<td>2</td>
+				<td>Damenrad</td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+			</tr>
+			 <jsp:setProperty name="Bean1" property="id" value="3"/> 
+			<tr>
+				<td>3</td>
+				<td>Kinderrad</td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+			</tr>
+			 <jsp:setProperty name="Bean1" property="id" value="4"/> 
+			<tr>
+				<td>4</td>
+				<td>Mountainbike</td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+			</tr>
+			 <jsp:setProperty name="Bean1" property="id" value="5"/> 
+			<tr>
+				<td>5</td>
+				<td>E-Bike</td>
+				<td> <jsp:getProperty name="Bean1" property="anzahl"/> </td>
+			</tr>
+		</table>
+	</div>
 
-  <div class="header">
-  	<h2>Registrieren</h2>
-  </div>
-	
-  <form method="post" action="register.php">
-  	<?php include('errors.php'); ?>
-  	<div class="input-group">
-  	  <label>Benutzername</label>
-  	  <input type="text" name="username" required value="<?php echo $username; ?>">
-  	</div>
-  	<div class="input-group">
-  	  <label>Email</label>
-  	  <input type="email" name="email" required value="<?php echo $email; ?>">
-  	</div>
-  	<div class="input-group">
-  	  <label>Passwort</label>
-  	  <input type="password" name="password_1" required minlength="8">
-  	</div>
-  	<div class="input-group">
-  	  <label>Passwort bestätigen</label>
-  	  <input type="password" name="password_2" required minlength="8">
-  	</div>
-  	<div class="input-group">
-  	  <button type="submit" class="btn btn-outline-secondary" name="reg_user">Registrieren</button>
-  	</div>
-  	<p>
-  		Bereits Mitglied? <a href="login.php">Anmelden</a>
-  	</p>
-  </form>
-  
- <footer class="container py-5">
+	<div class="textDiv">
+		<p>Ihr gewünschtes Fahrrad ist nicht mehr verfügbar? Melden Sie
+			sich bei uns! Wir geben unser Bestes und versuchen, weitere Fahrräder
+			dieses Typs bereitzustellen.</p>
+	</div>
+
+	<footer class="container py-5">
 		<div class="row">
 			<div class="col-12 col-md">
 				<canvas id="Canvas" width="50" height="50"
@@ -160,9 +173,7 @@
 			<div class="col-6 col-md">
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/bestand.jsp">Unser
-							Fahrradbestand</a></li>
+					<li><a class="text-muted" href="#">Unser Fahrradbestand</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
@@ -176,7 +187,20 @@
 			</div>
 		</div>
 	</footer>
-	
+
 	<script src="canvas.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 </body>
 </html>

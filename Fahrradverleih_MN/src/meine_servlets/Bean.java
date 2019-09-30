@@ -19,16 +19,8 @@ public class Bean {
 
 	public Bean() {
 
-		try {
-
-			conn = DriverManager.getConnection(connectionURL);
-			System.out.println("Verbindung erfolgreich!");
-
-		} catch (SQLException ex) {
-			System.out.println("Verbindung nicht erfolgreich!");
-		}
 	}
-	
+
 	public void setmessage(String message) {
 
 		this.message = message;
@@ -48,18 +40,27 @@ public class Bean {
 
 		return (leseAnzahl());
 	}
-	
+
 	public void setId(int id) {
-		
+
 		this.id = id;
 	}
-	
+
 	public int getId() {
-		
+
 		return this.id;
 	}
 
 	public int leseAnzahl() throws SQLException {
+
+		try {
+
+			conn = DriverManager.getConnection(connectionURL);
+			System.out.println("Verbindung erfolgreich!");
+
+		} catch (SQLException ex) {
+			System.out.println("Verbindung nicht erfolgreich!");
+		}
 
 		String command = "SELECT anzahl FROM fahrradbestand WHERE id = ?";
 		prepSt = conn.prepareStatement(command);

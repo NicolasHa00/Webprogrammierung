@@ -194,6 +194,18 @@
 	border-width: 1px;
 }
 
+.bgimg12 {
+	background-image: url("BestandPicture.jpg");
+	position: relative;
+	overflow: hidden;
+	padding: 2rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
 .bigDiv {
 	background-color: white;
 	height: 550px;
@@ -272,6 +284,29 @@
 
 .fontWhite {
 	color: white !important;
+}
+
+#Bestandstabelle {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#Bestandstabelle td, #Bestandstabelle th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#Bestandstabelle tr:nth-child(even){background-color: #f2f2f2;}
+
+#Bestandstabelle tr:hover {background-color: #ddd;}
+
+#Bestandstabelle th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #F7BE81;
+  color: white;
 }
 
 @import
