@@ -24,6 +24,7 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Connection conn;
 	String connectionURL;
+	boolean erlaubeVerleih;
 
 	public Servlet_JDBC_Connection() {
 		super();
@@ -36,6 +37,7 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 			connectionURL = "jdbc:mysql://" + hostName + "/" + dbName + "?user=" + userName + "&password=" + password;
 			conn = DriverManager.getConnection(connectionURL);
 			System.out.println("Verbindung erfolgreich!");
+			erlaubeVerleih = true;
 			return true;
 
 		} catch (SQLException ex) {
@@ -49,6 +51,7 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(connectionURL);
 			int anzahl = 0;
+			erlaubeVerleih = true;
 			String command = "SELECT anzahl FROM fahrradbestand WHERE id = ?";
 			PreparedStatement prepSt = conn.prepareStatement(command);
 			prepSt.setInt(1, id);
@@ -56,15 +59,19 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 			while (rs.next()) {
 				anzahl = rs.getInt(1);
 			}
-			System.out.println("Die Anzahl ist: " + anzahl);
-			--anzahl;
-			String update = "UPDATE fahrradbestand SET anzahl = ? WHERE id = ?";
-			PreparedStatement prepSt2 = conn.prepareStatement(update);
-			prepSt2.setInt(1, anzahl);
-			prepSt2.setInt(2, id);
-			prepSt2.executeUpdate();
-			System.out.println("Anzahl erfolgreich geupdated!");
-			conn.close();
+			if (anzahl <= 0) {
+				erlaubeVerleih = false;
+				System.out.println("Anzahl wurde nicht geupdated!");
+			} else {
+				--anzahl;
+				String update = "UPDATE fahrradbestand SET anzahl = ? WHERE id = ?";
+				PreparedStatement prepSt2 = conn.prepareStatement(update);
+				prepSt2.setInt(1, anzahl);
+				prepSt2.setInt(2, id);
+				prepSt2.executeUpdate();
+				System.out.println("Anzahl erfolgreich geupdated!");
+				conn.close();
+			}
 
 		} catch (Exception e) {
 			System.out.println("Exception ist aufgetreten!");
@@ -84,15 +91,19 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 			while (rs.next()) {
 				anzahl = rs.getInt(1);
 			}
-			System.out.println("Die Anzahl ist: " + anzahl);
-			++anzahl;
-			String update = "UPDATE verliehen SET anzahl = ? WHERE id = ?";
-			PreparedStatement prepSt2 = conn.prepareStatement(update);
-			prepSt2.setInt(1, anzahl);
-			prepSt2.setInt(2, id);
-			prepSt2.executeUpdate();
-			System.out.println("Anzahl erfolgreich geupdated!");
-			conn.close();
+
+			if (erlaubeVerleih == false) {
+				System.out.println("Anzahl wurde nicht geupdated!");
+			} else {
+				++anzahl;
+				String update = "UPDATE verliehen SET anzahl = ? WHERE id = ?";
+				PreparedStatement prepSt2 = conn.prepareStatement(update);
+				prepSt2.setInt(1, anzahl);
+				prepSt2.setInt(2, id);
+				prepSt2.executeUpdate();
+				System.out.println("Anzahl erfolgreich geupdated!");
+				conn.close();
+			}
 
 		} catch (Exception e) {
 			System.out.println("Exception ist aufgetreten!");
@@ -107,14 +118,6 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		/*
-		 * response.getWriter().append("Served at: ").append(request.getContextPath());
-		 * PrintWriter out = response.getWriter(); String contextParameterName =
-		 * "anfangswert01"; String contextParameterWert =
-		 * this.getInitParameter(contextParameterName);
-		 * out.println("Der Context-Parameter " + contextParameterName +
-		 * " hat den Wert " + contextParameterWert + ".");
-		 */
 		getMySQLConnection("localhost", "fahrradverleih_mn", "root", "");
 	}
 
@@ -130,7 +133,12 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 		int id = Integer.parseInt(idString);
 		bestandUpdate(id);
 		verleihUpdate(id);
-
+		PrintWriter out = response.getWriter();
+		response.setCharacterEncoding("UTF-8");
+		String verleihString = String.valueOf(erlaubeVerleih);
+		out.write(idString+verleihString);
+		out.flush();
+		out.close();
 	}
 
 }
