@@ -44,9 +44,9 @@ public class Bean {
 		this.anzahl = anzahl;
 	}
 
-	public int getAnzahl() {
+	public int getAnzahl() throws SQLException {
 
-		return this.anzahl;
+		return (leseAnzahl());
 	}
 	
 	public void setId(int id) {
@@ -59,7 +59,7 @@ public class Bean {
 		return this.id;
 	}
 
-	public void leseAnzahl(int id) throws SQLException {
+	public int leseAnzahl() throws SQLException {
 
 		String command = "SELECT anzahl FROM fahrradbestand WHERE id = ?";
 		prepSt = conn.prepareStatement(command);
@@ -68,5 +68,7 @@ public class Bean {
 		while (rs.next()) {
 			anzahl = rs.getInt(1);
 		}
+		conn.close();
+		return anzahl;
 	}
 }
