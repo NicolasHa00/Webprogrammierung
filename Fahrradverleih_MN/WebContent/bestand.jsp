@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <jsp:useBean id="Bean1" class="meine_servlets.Bean" scope="page">
-   <jsp:setProperty name="Bean1" property="id" value="1"/> 
+	<jsp:setProperty name="Bean1" property="id" value="1" />
 </jsp:useBean>
 
 <!DOCTYPE html>
@@ -80,11 +80,11 @@
 				</svg>
 			</a> <a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN">Home</a> <a
-				class="py-2 d-none d-md-inline-block" href="http://localhost/Fahrradverleih_MN/preise.html">Preise</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="http://localhost/Fahrradverleih_MN/preise.html">Preise</a> <a
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a> <a
-				class="py-2 d-none d-md-inline-block"
-				href="#">Bestand</a> <a
+				class="py-2 d-none d-md-inline-block" href="#">Bestand</a> <a
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a> <a
 				class="py-2 d-none d-md-inline-block" href="../index.php">Anmelden</a>
@@ -103,7 +103,11 @@
 		</div>
 	</div>
 
-	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 largeMargin">
+	<div class="textDiv4">
+		<p class="lead font-weight-normal">Fahrradbestand:</p>
+	</div>
+
+	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 largeMargin2">
 		<table id="Bestandstabelle">
 			<tr>
 				<th>ID</th>
@@ -113,33 +117,48 @@
 			<tr>
 				<td>1</td>
 				<td>Herrenrad</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
+				<td><jsp:getProperty name="Bean1" property="anzahl" />
+					Fahrräder</td>
 			</tr>
-			 <jsp:setProperty name="Bean1" property="id" value="2"/> 
+			<jsp:setProperty name="Bean1" property="id" value="2" />
 			<tr>
 				<td>2</td>
 				<td>Damenrad</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
+				<td><jsp:getProperty name="Bean1" property="anzahl" />
+					Fahrräder</td>
 			</tr>
-			 <jsp:setProperty name="Bean1" property="id" value="3"/> 
+			<jsp:setProperty name="Bean1" property="id" value="3" />
 			<tr>
 				<td>3</td>
 				<td>Kinderrad</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
+				<td><jsp:getProperty name="Bean1" property="anzahl" />
+					Fahrräder</td>
 			</tr>
-			 <jsp:setProperty name="Bean1" property="id" value="4"/> 
+			<jsp:setProperty name="Bean1" property="id" value="4" />
 			<tr>
 				<td>4</td>
 				<td>Mountainbike</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
+				<td><jsp:getProperty name="Bean1" property="anzahl" />
+					Fahrräder</td>
 			</tr>
-			 <jsp:setProperty name="Bean1" property="id" value="5"/> 
+			<jsp:setProperty name="Bean1" property="id" value="5" />
 			<tr>
 				<td>5</td>
 				<td>E-Bike</td>
-				<td> <jsp:getProperty name="Bean1" property="anzahl"/> Fahrräder </td>
+				<td><jsp:getProperty name="Bean1" property="anzahl" />
+					Fahrräder</td>
 			</tr>
 		</table>
+	</div>
+
+	<div class="textDiv4">
+		<p class="lead font-weight-normal">Ihre aktuell ausgeliehenen
+			Fahrräder:</p>
+	</div>
+
+	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 largeMargin2">
+		<ul id="verlieheneRaeder">
+		</ul>
 	</div>
 
 	<div class="textDiv">
@@ -189,6 +208,8 @@
 	</footer>
 
 	<script src="canvas.js"></script>
+	<script src="ausleihstorage.js"></script>
+	<script src="bestandupdate.js"></script>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
