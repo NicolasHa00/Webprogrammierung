@@ -93,6 +93,7 @@ function inHTMLschreiben(fahrradEintrag, ItemObj) {
 function ausHTMLentfernen(fahrradEintrag) {
 	var eintrag = document.getElementById(fahrradEintrag);
 	eintrag.parentNode.removeChild(eintrag);
+	document.location.reload(true);
 }
 
 function ausDatenbankEntfernen(idRückgabe) {
