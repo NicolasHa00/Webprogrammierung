@@ -154,6 +154,7 @@
 	<div class="textDiv4">
 		<p class="lead font-weight-normal">Ihre aktuell ausgeliehenen
 			Fahrräder:</p>
+		<p> Für die Rückgabe des Fahrrads können Sie das ausgeliehene Fahrrad hier anklicken. Die Preisabrechnung geschieht automatisch, solange Sie es an einem unserer Standorte abgegeben haben.</p>
 	</div>
 
 	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 largeMargin2">
@@ -208,8 +209,8 @@
 	</footer>
 
 	<script src="canvas.js"></script>
-	<script src="ausleihstorage.js"></script>
 	<script src="bestandupdate.js"></script>
+	<script src="ausleihstorage.js"></script>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"

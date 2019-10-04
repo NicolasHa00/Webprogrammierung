@@ -54,22 +54,32 @@ function fahrradHinzufügen(div) {
 		var eintragText = {
 			'value' : value
 		};
-		var eintragIndex = "Verleih: " + zeit.getTime();
+		var eintragIndex = div + "Verleih: " + zeit.getTime();
 		localStorage.setItem(eintragIndex, JSON.stringify(eintragText));
 		fahrradArray.push(eintragIndex);
 		localStorage.setItem("fahrradArray", JSON.stringify(fahrradArray));
-		inHTMLschreiben(fahrradEintrag, eintragText);
+		inHTMLschreiben(eintragIndex, eintragText);
 	}
 }
 
-/*
- * function toDoLöschen(e) { var fahrradEintrag = e.target.id; var fahrradArray =
- * bestandAbrufen(); if (fahrradArray) { for (var i = 0; i <
- * fahrradArray.length; i++) { if (fahrradEintrag == fahrradArray[i]) {
- * fahrradArray.splice(i, 1); } } localStorage.removeItem(fahrradEintrag);
- * localStorage.setItem('fahrradArray', JSON.stringify(fahrradArray));
- * ausDOMentfernen(fahrradEintrag); } }
- */
+function fahrradLöschen(fahrrad) {
+	var fahrradEintrag = fahrrad.target.id;
+	var idRückgabe = "";
+	console.log(fahrrad.target.id);
+	var fahrradArray = bestandAbrufen();
+	if (fahrradArray) {
+		for (var i = 0; i < fahrradArray.length; i++) {
+			if (fahrradEintrag == fahrradArray[i]) {
+				idRückgabe = fahrrad.target.id.slice(0,1);
+				fahrradArray.splice(i, 1);
+			}
+		}
+		localStorage.removeItem(fahrradEintrag);
+		localStorage.setItem('fahrradArray', JSON.stringify(fahrradArray));
+		ausDatenbankEntfernen(idRückgabe);
+		ausHTMLentfernen(fahrradEintrag);
+	}
+}
 
 function inHTMLschreiben(fahrradEintrag, ItemObj) {
 	var eintraege = document.getElementById("verlieheneRaeder");
@@ -77,20 +87,17 @@ function inHTMLschreiben(fahrradEintrag, ItemObj) {
 	eintrag.setAttribute('id', fahrradEintrag);
 	eintrag.innerHTML = ItemObj.value;
 	eintraege.appendChild(eintrag);
-	//eintrag.onclick = toDoLöschen;
+	eintrag.onclick = fahrradLöschen;
 }
 
-/*function ausDOMentfernen(fahrradEintrag) {
+function ausHTMLentfernen(fahrradEintrag) {
 	var eintrag = document.getElementById(fahrradEintrag);
 	eintrag.parentNode.removeChild(eintrag);
-}*/
+}
 
-/*function allesLöschen() {
-	localStorage.clear();
-	var ItemList = document.getElementById("verlieheneRaeder");
-	var eintraege = ItemList.childNodes;
-	for (var i = eintraege.length - 1; i >= 0; i--) {
-		ItemList.removeChild(eintraege[i]);
-	}
-	var fahrradArray = bestandAbrufen();
-}*/
+function ausDatenbankEntfernen(idRückgabe) {
+
+	$.post("Servlet_JDBC_Connection2", {
+		rückgabeId : idRückgabe
+	});
+}

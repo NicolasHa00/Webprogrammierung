@@ -136,9 +136,8 @@ public class Servlet_JDBC_Connection extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		response.setCharacterEncoding("UTF-8");
 		String verleihString = String.valueOf(erlaubeVerleih);
-		out.write(idString+verleihString);
+		out.write(idString + verleihString);
 		out.flush();
 		out.close();
 	}
-
 }
