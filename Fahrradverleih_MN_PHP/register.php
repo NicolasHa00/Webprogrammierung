@@ -87,7 +87,7 @@
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a>
 			<a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/bestand.html">Bestand</a>
+				href="http://localhost/Fahrradverleih_MN/bestand.jsp">Bestand</a>
 			<a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a>
 			<a class="py-2 d-none d-md-inline-block"
@@ -161,7 +161,7 @@
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/bestand.html">Unser
+						href="http://localhost/Fahrradverleih_MN/bestand.jsp">Unser
 							Fahrradbestand</a></li>
 				</ul>
 			</div>

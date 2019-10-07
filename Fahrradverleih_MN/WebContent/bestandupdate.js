@@ -15,6 +15,7 @@ function bestandsupdate(id) {
 		var container = document.getElementById(div);
 		if (bool == "true") {
 			container.innerHTML = text1;
+			fahrradHinzufügen(div);
 		} else {
 			container.innerHTML = text2;
 		}
