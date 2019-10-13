@@ -168,7 +168,7 @@ if (isset($_GET['logout'])) {
 					<li><a class="text-muted"
 						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/kontakt.html">Impressum</a></li>
+						href="http://localhost/Fahrradverleih_MN/impressum.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>

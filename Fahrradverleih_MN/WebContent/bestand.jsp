@@ -154,7 +154,7 @@
 	<div class="textDiv4">
 		<p class="lead font-weight-normal">Ihre aktuell ausgeliehenen
 			Fahrräder:</p>
-		<p> Für die Rückgabe des Fahrrads können Sie das ausgeliehene Fahrrad hier anklicken. Die Preisabrechnung geschieht automatisch, solange Sie es an einem unserer Standorte abgegeben haben.</p>
+		<p class="fett"> Für die Rückgabe des Fahrrads können Sie das ausgeliehene Fahrrad hier anklicken. Die Preisabrechnung geschieht automatisch, solange Sie es an einem unserer Standorte abgegeben haben.</p>
 	</div>
 
 	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 largeMargin2">
@@ -202,7 +202,7 @@
 					<li><a class="text-muted"
 						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/kontakt.html">Impressum</a></li>
+						href="http://localhost/Fahrradverleih_MN/impressum.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>
