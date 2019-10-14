@@ -105,7 +105,7 @@ if (isset($_GET['logout'])) {
 		</div>
 	</nav>
 	
-	<div class="bgimg1 height500px">
+	<div class="bgimg13 height500px">
 		<div class="col-md-5 p-lg-5 mx-auto my-5">
 			<h1 class="display-4 font-weight-normal"><p>Willkommen <strong><?php echo $_SESSION['username']; ?></strong></p></h1>
 			<p class="lead font-weight-normal">Treten sie der Welt des Bikesharing bei!</p>

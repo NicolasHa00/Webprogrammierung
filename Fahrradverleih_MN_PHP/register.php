@@ -95,9 +95,9 @@
 		</div>
 	</nav>
 	
-	<div class="bgimg1 height500px">
-		<div class="col-md-5 p-lg-5 mx-auto my-5">
-			<h1 class="display-4 font-weight-normal">Registrieren</h1>
+	<div class="bgimg13 height300px">
+		<div class="col-md-5 p-lg-4 mx-auto margin-header">
+			<h1 class="display-5">Registrieren</h1>
 			<p class="lead font-weight-normal">Treten sie der Welt des Bikesharing bei!</p>
 			<a class="btn2 btn22-outline-secondary"
 				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>

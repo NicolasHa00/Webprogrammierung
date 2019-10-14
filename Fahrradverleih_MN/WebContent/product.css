@@ -205,6 +205,17 @@
 	background-size: cover;
 }
 
+.bgimg13 {
+	background-image: url("LoginPicture.jpg");
+	position: relative;
+	overflow: hidden;
+	padding: 2rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .bigDiv {
 	background-color: white;
 	height: 550px;
@@ -263,6 +274,10 @@
 
 .height500px {
 	height: 500px;
+}
+
+.height300px {
+	height: 300px;
 }
 
 .textDiv {
