@@ -205,6 +205,17 @@
 	background-size: cover;
 }
 
+.bgimg13 {
+	background-image: url("LoginPicture.jpg");
+	position: relative;
+	overflow: hidden;
+	padding: 2rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .bigDiv {
 	background-color: white;
 	height: 550px;
@@ -265,6 +276,10 @@
 	height: 500px;
 }
 
+.height300px {
+	height: 300px;
+}
+
 .textDiv {
 	position: relative;
 	padding: 1rem;
@@ -296,8 +311,29 @@
 	text-align: center;
 }
 
+.textDiv5 {
+	position: relative;
+	padding: 0rem;
+	margin: auto;
+	text-align: center;
+	width: 50%;
+}
+
+.textDiv6 {
+	position: relative;
+	padding: 0rem;
+	margin: auto;
+	margin-top: 1rem !important;
+	text-align: center;
+	width: 50%;
+}
+
 .fontWhite {
 	color: white !important;
+}
+
+.fett {
+	font-weight: bold;
 }
 
 #Bestandstabelle {

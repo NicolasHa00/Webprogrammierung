@@ -92,7 +92,7 @@
 		</div>
 	</nav>
 
-	<div class="bgimg1 height500px">
+	<div class="bgimg13 height300px">
 		<div class="col-md-5 p-lg-4 mx-auto margin-header">
 			<h1 class="display-5">Anmelden</h1>
 			<p class="lead font-weight-normal">Treten sie der Welt des
@@ -168,7 +168,7 @@
 					<li><a class="text-muted"
 						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/kontakt.html">Impressum</a></li>
+						href="http://localhost/Fahrradverleih_MN/impressum.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>
