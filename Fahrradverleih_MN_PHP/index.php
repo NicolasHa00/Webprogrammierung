@@ -123,14 +123,24 @@ if (isset($_GET['logout'])) {
   	<?php if (isset($_SESSION['success'])) : ?>
       <div class="textDiv">
       	<?php
-
     function createImage()
     {
         $ausgabe = $_SESSION['success'];
+        $db = mysqli_connect('localhost', 'root', '', 'fahrradverleih_mn');
+        $sumquery = $db->prepare("SELECT SUM(anzahl) AS value_sum FROM verliehen");
+        $sumquery->execute();
+        $result = $sumquery->get_result();
+        $sum = 0;
+        while($row = $result->fetch_assoc()) {
+          $sum += $row['value_sum'];
+        }
+        $summeverliehen = floatval($sum);
+        $prozentverliehen = floatval((($summeverliehen/50) * 100));
+        $stprozentverliehen = strval($prozentverliehen);
         $image = imagecreate(1450, 50);
         $background_color = imagecolorallocate($image, 51, 51, 51);
         $text_color = imagecolorallocate($image, 255, 255, 255);
-        imagestring($image, 5, 640, 15, $ausgabe, $text_color);
+        imagestring($image, 5, 155, 15, $ausgabe . ". Leihe Dir dein Fahrrad schnell aus und beeile dich besser, schon " . $stprozentverliehen . "% unserer Fahrraeder sind verliehen!", $text_color);
         imagepng($image, "image.png");
         imagedestroy($image);
         unset($_SESSION['success']);
