@@ -149,7 +149,6 @@ if (isset($_GET['logout'])) {
     ?> 
       </div>
   	<?php endif ?>
-   
 </div>
 
 	<footer class="container py-5">
