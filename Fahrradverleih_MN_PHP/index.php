@@ -109,7 +109,7 @@ if (isset($_GET['logout'])) {
 					Willkommen <strong><?php echo $_SESSION['username']; ?></strong>
 				</p>
 			</h1>
-			<p class="lead font-weight-normal">Treten sie der Welt des
+			<p class="lead font-weight-normal">Treten Sie der Welt des
 				Bikesharing bei!</p>
 			<a class="btn btn-outline-secondary"
 				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
