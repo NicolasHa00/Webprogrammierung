@@ -119,7 +119,6 @@ if (isset($_GET['logout'])) {
 
 
 	<div class="content">
-		<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
       <div class="textDiv">
       	<?php
