@@ -79,16 +79,16 @@
 						style="fill:url(#grad1);stroke:white;stroke-width:1" />
 				</svg>
 			</a> <a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN">Home</a> <a
+				href="http://localhost/Fahrradverleih_MN_PHP/index.php">Home</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/preise.html">Preise</a> <a
+				href="http://localhost/Fahrradverleih_MN_PHP/preise.php">Preise</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a> <a
+				href="http://localhost/Fahrradverleih_MN_PHP/verleih.php">Verleih</a> <a
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/bestand.jsp">Bestand</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a> <a
-				class="py-2 d-none d-md-inline-block" href="/index.php">An-/Abmelden</a>
+				href="http://localhost/Fahrradverleih_MN_PHP/kontakt.php">Kontakt</a> <a
+				class="py-2 d-none d-md-inline-block" href="/login.php">An-/Abmelden</a>
 		</div>
 	</nav>
 
@@ -98,7 +98,7 @@
 			<p class="lead font-weight-normal">Treten sie der Welt des
 				Bikesharing bei!</p>
 			<a class="btn btn-outline-secondary"
-				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
+				href="http://localhost/Fahrradverleih_MN_PHP/index.php">Zurück zu Home</a>
 		</div>
 	</div>
 
@@ -124,7 +124,6 @@
 		<div class="input-group">
 			<button type="submit" class="btn2" name="login_user">Anmelden</button>
 		</div>
-		 <input type="checkbox" name="test" checked> 
 			<p>
 			Noch kein Mitglied? <a href="register.php">Registrieren</a>
 		</p>

@@ -30,7 +30,9 @@
 </style>
 <link href="product.css" rel="stylesheet">
 </head>
+
 <body>
+
 	<nav class="site-header sticky-top py-1">
 		<div
 			class="container d-flex flex-column flex-md-row justify-content-between">
@@ -73,17 +75,32 @@
 						style="fill:url(#grad1);stroke:white;stroke-width:1" />
 				</svg>
 			</a> <a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN">Home</a> <a
-				class="py-2 d-none d-md-inline-block" href="#">Preise</a> <a
+				href="http://localhost/Fahrradverleih_MN_PHP/index.php">Home</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a> <a
+				href="http://localhost/Fahrradverleih_MN_PHP/preise.php">Preise</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="http://localhost/Fahrradverleih_MN_PHP/verleih.php">Verleih</a> <a
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/bestand.jsp">Bestand</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a> <a
-				class="py-2 d-none d-md-inline-block" href="../index.php">An-/Abmelden</a>
+				href="http://localhost/Fahrradverleih_MN_PHP/kontakt.php">Kontakt</a> <a
+				class="py-2 d-none d-md-inline-block" href="../Fahrradverleih_MN_PHP/loggedIn.php">An-/Abmelden</a>
 		</div>
 	</nav>
+	
+	<?php 
+    session_start();
+    if (!isset($_SESSION['username'])) : ?>
+	<div class="bgimg1 height500px">
+		<div class="col-md-5 p-lg-5 mx-auto my-5">
+			<h1 class="display-4 font-weight-normal">Unsere Preise</h1>
+			<p class="lead font-weight-normal">Für diesen Bereich müssen sie angemeldet sein.</p>
+			<a class="btn btn-outline-secondary"
+				href="http://localhost/Fahrradverleih_MN_PHP/login.php">Anmelden</a>
+		</div>
+	</div>
+	<?php else :
+?>
 
 	<div class="bgimg1 height500px">
 		<div class="col-md-5 p-lg-5 mx-auto my-5">
@@ -171,7 +188,7 @@
 				<h5>Preise</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/preise.html">Unsere
+						href="http://localhost/Fahrradverleih_MN_PHP/preise.php">Unsere
 							Preise</a></li>
 				</ul>
 			</div>
@@ -179,23 +196,21 @@
 				<h5>Verleih</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/verleih.html">Unser
+						href="http://localhost/Fahrradverleih_MN_PHP/verleih.php">Unser
 							Fahrradverleih</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/bestand.jsp">Unser
-							Fahrradbestand</a></li>
+					<li><a class="text-muted" href="#">Unser Fahrradbestand</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Kontakt</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
+						href="http://localhost/Fahrradverleih_MN_PHP/kontakt.php">Kontakt</a></li>
 					<li><a class="text-muted"
 						href="http://localhost/Fahrradverleih_MN/impressum.html">Impressum</a></li>
 				</ul>
@@ -219,3 +234,4 @@
 		crossorigin="anonymous"></script>
 </body>
 </html>
+<?php endif ?>

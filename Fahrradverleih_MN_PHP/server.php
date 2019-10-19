@@ -48,7 +48,7 @@ if (isset($_POST['reg_user'])) {
         mysqli_query($db, $query);
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "Sie sind jetzt angemeldet!";
-        header('location: index.php');
+        header('location: loggedIn.php');
     }
 }
 
@@ -72,7 +72,7 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($results) == 1) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "Sie sind jetzt angemeldet!";
-            header('location: index.php');
+            header('location: loggedIn.php');
             setcookie("UsernameCookie", $username, time()+86400);
         }
         else {
