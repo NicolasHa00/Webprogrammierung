@@ -102,9 +102,6 @@
 		</div>
 	</div>
 
-
-
-
 	<div class="header">
 		<h2>Anmelden</h2>
 	</div>
@@ -124,7 +121,6 @@
 		<div class="input-group">
 			<button type="submit" class="btn2" name="login_user">Anmelden</button>
 		</div>
-		 <input type="checkbox" name="test" checked> 
 			<p>
 			Noch kein Mitglied? <a href="register.php">Registrieren</a>
 		</p>
