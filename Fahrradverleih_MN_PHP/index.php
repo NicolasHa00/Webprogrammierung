@@ -101,7 +101,7 @@ if (isset($_GET['logout'])) {
 			<a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a>
 			<a class="py-2 d-none d-md-inline-block"
-				href="/index.php">Abmelden</a>
+				href="/index.php">An-/Abmelden</a>
 		</div>
 	</nav>
 	
@@ -112,7 +112,8 @@ if (isset($_GET['logout'])) {
 			<a class="btn btn-outline-secondary"
 				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
 				<a class="btn btn-outline-secondary"
-				href="index.php?logout='1'">Abmelden</a>
+				href="index.php?logout='1'" 
+				>Abmelden</a>
 		</div>
 	</div>
 	
