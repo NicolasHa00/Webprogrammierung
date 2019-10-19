@@ -29,13 +29,13 @@
 }
 </style>
 <link href="product.css" rel="stylesheet">
+<script type="text/javascript" src="server.php"></script>
 </head>
 <body>
 	<nav class="site-header sticky-top py-1">
 		<div
 			class="container d-flex flex-column flex-md-row justify-content-between">
-			<a class="lead py-2 d-md-inline-block"
-				href="http://localhost:8080/Fahrradverleih_MN">Fahrradverleih MN</a>
+			<a class="lead py-2 d-md-inline-block" href="#">Fahrradverleih MN</a>
 			<a class="py-2" href="#"> <svg height="25" width="30"
 					fill="white" class="d-block mx-auto" viewBox="0 0 25 30"
 					focusable="false">
@@ -72,96 +72,66 @@
 					<ellipse cx="10" cy="10" rx="1.5" ry="0.8"
 						style="fill:url(#grad1);stroke:white;stroke-width:1" />
 				</svg>
-			</a> <a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN">Home</a> <a
+			</a> <a class="py-2 d-none d-md-inline-block" href="#">Home</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/preise.html">Preise</a> <a
-				class="py-2 d-none d-md-inline-block" href="#">Verleih</a> <a
+				href="preise.php">Preise</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="verleih.php">Verleih</a> <a
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/bestand.jsp">Bestand</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a> <a
-				class="py-2 d-none d-md-inline-block" href="../index.php">An-/Abmelden</a>
-		</div>
+				href="kontakt.php">Kontakt</a> 
+				<a class="py-2 d-none d-md-inline-block" href="../Fahrradverleih_MN_PHP/loggedIn.php" >An-/Abmelden</a> 
+
+
 	</nav>
+	
 
-	<div class="bgimg6">
-		<div class="col-md-5 p-lg-5 mx-auto my-5 topPadding topMargin2">
-			<h1 class="display-4 font-weight-normal fontShadow">Unsere
-				Fahrräder</h1>
-			<p class="lead font-weight-normal fontShadow">Hier können Sie
-				unsere verschiedenen Fahrradmodelle ausleihen. Stöbern Sie einfach
-				durch die verschiedenen Räder und wählen Sie das Fahrrad aus, das am
-				besten zu Ihnen passt.</p>
+	<div class="bgimg1 height600px">
+		<div class="col-md-5 p-lg-4 mx-auto margin-header">
+			<h1 class=display-5>Fahrradverleih auch in ihrer Nähe!</h1>
+			<p class="lead font-weight-normal">Starten Sie jetzt in die Welt
+				des Fahrradleasings und erleben Sie unkomplizierte, flexible
+				Fahrradvermietung zu unschlagbaren Preisen!</p>
+			<a class="btn btn-outline-secondary"
+				href="http://localhost/Fahrradverleih_MN/preise.html">Unser
+				Portfolio</a>
 		</div>
 	</div>
 
 	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div>
-			<div class="textDiv5">
-				<h2>Herrenrad</h2>
-				<button class="btn btn-outline-secondary topMargin2" type="button"
-					onclick="bestandsupdate(1)">Ausleihen!</button>
+		<div
+			class="bg-lightGrey mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-black overflow-hidden font-bold">
+			<div class="my-3 py-3">
+				<p>Machen sie Fahrrad fahren zum selbstverständlichen
+					Bestandteil ihrer Mobilität! Bleiben sie in Bewegung und haben sie
+					Freude daran auf Bus, Bahn und Auto zu verzichten. Ihre Optionen
+					für Bewegung werden durch Bikesharing interessanter und
+					abwechslungsreicher.</p>
 			</div>
-			<div id="1" class="textDiv6"></div>
 		</div>
-		<div>
-			<div class="textDiv5">
-				<h2>Damenrad</h2>
-				<button class="btn btn-outline-secondary topMargin2" type="button"
-					onclick="bestandsupdate(2)">Ausleihen!</button>
+		<div class="bgimg2">
+			<div class="my-3 p-3">
+				<h2 class="display-5">Freude an Bewegung</h2>
 			</div>
-			<div id="2" class="textDiv6"></div>
 		</div>
 	</div>
 
 	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div class="bgimg7"></div>
-		<div class="bgimg8"></div>
-	</div>
-
-	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div>
-			<div class="textDiv5">
-				<h2>Kinderrad</h2>
-				<button class="btn btn-outline-secondary topMargin2" type="button"
-					onclick="bestandsupdate(3)">Ausleihen!</button>
+		<div class="bgimg3">
+			<div class="my-3 p-3">
+				<h2 class="display-5">Natur genießen</h2>
 			</div>
-			<div id="3" class="textDiv6"></div>
 		</div>
-		<div>
-			<div class="textDiv5">
-				<h2>E-Bike</h2>
-				<button class="btn btn-outline-secondary topMargin2" type="button"
-					onclick="bestandsupdate(5)">Ausleihen!</button>
+		<div
+			class="bg-lightGrey mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-black overflow-hidden font-bold">
+			<div class="my-3 py-3">
+				<p>Wollen sie dem Stadtverkehr entfliehen? Einfach mit unserem
+					Bikesharing die Natur erkunden und genießen! Verwenden sie einen
+					unserer zahlreichen Fahrradtypen in unserem Portfolio und seien sie
+					für jedes Abenteuer gerüstet.</p>
 			</div>
-			<div id="5" class="textDiv6"></div>
 		</div>
-	</div>
-
-	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div class="bgimg9"></div>
-		<div class="bgimg10"></div>
-	</div>
-
-	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div>
-			<div class="textDiv5">
-				<h2>Mountainbike</h2>
-				<button class="btn btn-outline-secondary topMargin2" type="button"
-					onclick="bestandsupdate(4)">Ausleihen!</button>
-			</div>
-			<div id="4" class="textDiv6"></div>
-		</div>
-	</div>
-
-	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div class="bgimg11"></div>
-	</div>
-
-
-	<div class="textDiv">
-		<p>Wenden Sie sich bei Fragen gerne an uns.</p>
 	</div>
 
 	<footer class="container py-5">
@@ -174,7 +144,7 @@
 				<h5>Preise</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/preise.html">Unsere
+						href="http://localhost/Fahrradverleih_MN_PHP/preise.php">Unsere
 							Preise</a></li>
 				</ul>
 			</div>
@@ -182,33 +152,29 @@
 				<h5>Verleih</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/verleih.html">Unser
+						href="http://localhost/Fahrradverleih_MN_PHP/verleih.php">Unser
 							Fahrradverleih</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/bestand.jsp">Unser
-							Fahrradbestand</a></li>
+					<li><a class="text-muted" href="#">Unser Fahrradbestand</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
 				<h5>Kontakt</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
+						href="http://localhost/Fahrradverleih_MN_PHP/kontakt.php">Kontakt</a></li>
 					<li><a class="text-muted"
 						href="http://localhost/Fahrradverleih_MN/impressum.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>
 	</footer>
-
+	
 	<script src="canvas.js"></script>
-	<script src="bestandupdate.js"></script>
-	<script src="ausleihstorage.js"></script>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
@@ -223,4 +189,6 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 </body>
+
 </html>
+

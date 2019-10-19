@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if (! isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+}
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,25 +19,45 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
-<title>Fahrradverleih MN</title>
+<title>Login</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 
+
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
+<!-- Custom styles for this template -->
 <link href="product.css" rel="stylesheet">
+
+
 </head>
 <body>
+
 	<nav class="site-header sticky-top py-1">
 		<div
 			class="container d-flex flex-column flex-md-row justify-content-between">
-
-			<a class="lead py-2 d-md-inline-block"
-				href="http://localhost:8080/Fahrradverleih_MN">Fahrradverleih MN</a>
-			<a class="py-2" href="#"> <svg height="25" width="30"
-					fill="white" class="d-block mx-auto" viewBox="0 0 25 30"
-					focusable="false">
+			<a class="lead py-2 d-md-inline-block" href="#">Fahrradverleih MN</a>
+			<a class="py-2" href="#"> 
+			
+			<svg height="25" width="30" fill="white"
+					class="d-block mx-auto" viewBox="0 0 25 30" focusable="false">
 					<defs>
    						<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
   					    <stop offset="0%"
@@ -58,66 +92,68 @@
 						style="fill:url(#grad1);stroke:white;stroke-width:1" />
 				</svg>
 			</a> <a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN">Home</a> <a
-				class="py-2 d-none d-md-inline-block" href="#">Preise</a> <a
+				href="http://localhost/Fahrradverleih_MN_PHP/index.php">Home</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a> <a
+				href="http://localhost/Fahrradverleih_MN_PHP/preise.php">Preise</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="http://localhost/Fahrradverleih_MN_PHP/verleih.php">Verleih</a> <a
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/bestand.jsp">Bestand</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a> <a
-				class="py-2 d-none d-md-inline-block" href="../index.php">An-/Abmelden</a>
+				href="http://localhost/Fahrradverleih_MN_PHP/kontakt.php">Kontakt</a> <a
+				class="py-2 d-none d-md-inline-block" href="/loggedIn.php">An-/Abmelden</a>
 		</div>
 	</nav>
 
-	<div class="bgimg4">
+	<div class="bgimg13 height500px">
 		<div class="col-md-5 p-lg-5 mx-auto my-5">
-			<h1 class="display-4 font-weight-normal fontShadow">Wir sind für
-				Sie da!</h1>
-			<p class="lead font-weight-normal fontShadow">Hier finden Sie
-				unsere Kontaktdaten und den Weg zu uns. Einfach und bequem über
-				Google Maps.</p>
+			<h1 class="display-4 font-weight-normal">
+				<p>
+					Willkommen <strong><?php echo $_SESSION['username']; ?></strong>
+				</p>
+			</h1>
+			<p class="lead font-weight-normal">Treten Sie der Welt des
+				Bikesharing bei!</p>
+			<a class="btn btn-outline-secondary"
+				href="http://localhost/Fahrradverleih_MN_PHP/index.php">Zurück zu Home</a>
+			<a class="btn btn-outline-secondary" href="loggedIn.php?logout='1'">Abmelden</a>
 		</div>
 	</div>
 
-	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div
-			class="bg-lightGrey mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-black overflow-hidden font-bold topPadding">
-			<div class="my-3 py-3">
-				<p>Sehen Sie hier unsere Anschrift und die Kontaktinformationen
-					ein:</p>
-				<p>Fahrradverleih MN</p>
-				<p>Melvin Kelchner, Nicolas Hautschek</p>
-				<p>O4 7, 68161 Mannheim, Germany</p>
-				<p>Fahrradverleih@MN.com</p>
-				<p>0621 520943</p>
-				<a class="btn btn-outline-secondary topMargin"
-					href="http://localhost/Fahrradverleih_MN/impressum.html">Impressum
-					anzeigen</a>
-			</div>
-		</div>
-		<div class="bgimg5">
-			<div class="my-3 p-3">
-				<h2 class="display-5 fontShadow">Kontaktieren Sie uns!</h2>
-				<p class="lead fontShadow">Wir freuen uns über jede Nachricht.</p>
-			</div>
-		</div>
-	</div>
 
-	<div class="textDiv2">
-		<p class="lead font-weight-normal">Besuchen Sie uns doch mal vor
-			Ort und lassen Sie sich ihre Route per Google Maps berechnen.</p>
-		<p class="lead font-weight-normal">Unseren Standort finden Sie an
-			der folgenden Adresse:</p>
-	</div>
+	<div class="content">
 
-	<div class="bigDiv">
-		<div style="overflow: hidden; width: 1420px; position: relative;">
-			<iframe width="1420" height="500"
-				src="https://maps.google.com/maps?width=1800&amp;height=400&amp;hl=en&amp;q=O5%2068161%20Mannheim+(Fahrradverleih%20MN)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
-				frameborder="0" scrolling="no"></iframe>
-		</div>
-	</div>
+  	<?php if (isset($_SESSION['success'])) : ?>
+      <div class="textDiv">
+      	<?php
+    function createImage()
+    {
+        $ausgabe = $_SESSION['success'];
+        $db = mysqli_connect('localhost', 'root', '', 'fahrradverleih_mn');
+        $sumquery = $db->prepare("SELECT SUM(anzahl) AS value_sum FROM verliehen");
+        $sumquery->execute();
+        $result = $sumquery->get_result();
+        $sum = 0;
+        while($row = $result->fetch_assoc()) {
+          $sum += $row['value_sum'];
+        }
+        $summeverliehen = floatval($sum);
+        $prozentverliehen = floatval((($summeverliehen/50) * 100));
+        $stprozentverliehen = strval($prozentverliehen);
+        $image = imagecreate(1450, 50);
+        $background_color = imagecolorallocate($image, 51, 51, 51);
+        $text_color = imagecolorallocate($image, 255, 255, 255);
+        imagestring($image, 5, 155, 15, $ausgabe . ". Leihe Dir dein Fahrrad schnell aus und beeile dich besser, schon " . $stprozentverliehen . "% unserer Fahrraeder sind verliehen!", $text_color);
+        imagepng($image, "image.png");
+        imagedestroy($image);
+        unset($_SESSION['success']);
+    }
+    createImage();
+    print "<img src=image.png?" . date("U") . ">";
+    ?> 
+      </div>
+  	<?php endif ?>
+</div>
 
 	<footer class="container py-5">
 		<div class="row">
@@ -162,18 +198,5 @@
 	</footer>
 
 	<script src="canvas.js"></script>
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
 </body>
 </html>
