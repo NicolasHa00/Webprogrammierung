@@ -91,7 +91,7 @@
 			<a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a>
 			<a class="py-2 d-none d-md-inline-block"
-				href="/index.php">Anmelden</a>
+				href="/index.php">An-/Abmelden</a>
 		</div>
 	</nav>
 	
