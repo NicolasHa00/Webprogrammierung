@@ -139,7 +139,7 @@ if (isset($_GET['logout'])) {
         $image = imagecreate(1450, 50);
         $background_color = imagecolorallocate($image, 51, 51, 51);
         $text_color = imagecolorallocate($image, 255, 255, 255);
-        imagestring($image, 5, 155, 15, $ausgabe . ". Leihe Dir dein Fahrrad schnell aus und beeile dich besser, schon " . $stprozentverliehen . "% unserer Fahrraeder sind verliehen!", $text_color);
+        imagestring($image, 5, 155, 15, $ausgabe . " Leihe Dir dein Fahrrad schnell aus und beeile dich besser, schon " . $stprozentverliehen . "% unserer Fahrraeder sind verliehen!", $text_color);
         imagepng($image, "image.png");
         imagedestroy($image);
         unset($_SESSION['success']);
