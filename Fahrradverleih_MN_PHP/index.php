@@ -88,6 +88,15 @@ if (isset($_GET['logout'])) {
 						style="stroke:rgb(255,255,255);stroke-width:1" />
 					<ellipse cx="10" cy="10" rx="1.5" ry="0.8"
 						style="fill:url(#grad1);stroke:white;stroke-width:1" />
+
+	
+		
+
+	
+
+<div class="content">
+  	<!-- notification message -->
+
 				</svg> </a> <a class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN">Home</a> <a
 				class="py-2 d-none d-md-inline-block"
@@ -119,6 +128,7 @@ if (isset($_GET['logout'])) {
 
 
 	<div class="content">
+
   	<?php if (isset($_SESSION['success'])) : ?>
       <div class="textDiv">
       	<?php
