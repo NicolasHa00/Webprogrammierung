@@ -76,7 +76,7 @@ if (isset($_POST['login_user'])) {
             setcookie("UsernameCookie", $username, time()+86400);
         }
         else {
-            array_push($errors, "Falsche Kombination von Benutzername und Passowort!");
+            array_push($errors, "Falsche Kombination von Benutzername und Passwort!");
         }
     }
 }
