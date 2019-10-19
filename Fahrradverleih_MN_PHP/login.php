@@ -85,14 +85,14 @@
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/bestand.html">Bestand</a> <a
+				href="http://localhost/Fahrradverleih_MN/bestand.jsp">Bestand</a> <a
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a> <a
 				class="py-2 d-none d-md-inline-block" href="/index.php">An-/Abmelden</a>
 		</div>
 	</nav>
 
-	<div class="bgimg1 height500px">
+	<div class="bgimg13 height300px">
 		<div class="col-md-5 p-lg-4 mx-auto margin-header">
 			<h1 class="display-5">Anmelden</h1>
 			<p class="lead font-weight-normal">Treten sie der Welt des
@@ -158,7 +158,7 @@
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/bestand.html">Unser
+						href="http://localhost/Fahrradverleih_MN/bestand.jsp">Unser
 							Fahrradbestand</a></li>
 				</ul>
 			</div>
@@ -168,7 +168,7 @@
 					<li><a class="text-muted"
 						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/kontakt.html">Impressum</a></li>
+						href="http://localhost/Fahrradverleih_MN/impressum.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>

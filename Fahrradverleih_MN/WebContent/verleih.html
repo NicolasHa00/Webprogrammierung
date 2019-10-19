@@ -78,7 +78,7 @@
 				href="http://localhost/Fahrradverleih_MN/preise.html">Preise</a> <a
 				class="py-2 d-none d-md-inline-block" href="#">Verleih</a> <a
 				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/bestand.html">Bestand</a> <a
+				href="http://localhost/Fahrradverleih_MN/bestand.jsp">Bestand</a> <a
 				class="py-2 d-none d-md-inline-block"
 				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a> <a
 				class="py-2 d-none d-md-inline-block" href="../index.php">An-/Abmelden</a>
@@ -97,16 +97,21 @@
 	</div>
 
 	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div id="1" class="textDiv3">
-			<h2>Herrenrad</h2>
-			<button class="btn btn-outline-secondary topMargin2" type="button"
-				onclick="bestandsupdate(1)">Ausleihen!</button>
+		<div>
+			<div class="textDiv5">
+				<h2>Herrenrad</h2>
+				<button class="btn btn-outline-secondary topMargin2" type="button"
+					onclick="bestandsupdate(1)">Ausleihen!</button>
+			</div>
+			<div id="1" class="textDiv6"></div>
 		</div>
-		<div id="2" class="textDiv3">
-			<h2>Damenrad</h2>
-
-			<button class="btn btn-outline-secondary topMargin2" type="button"
-				onclick="bestandsupdate(2)">Ausleihen!</button>
+		<div>
+			<div class="textDiv5">
+				<h2>Damenrad</h2>
+				<button class="btn btn-outline-secondary topMargin2" type="button"
+					onclick="bestandsupdate(2)">Ausleihen!</button>
+			</div>
+			<div id="2" class="textDiv6"></div>
 		</div>
 	</div>
 
@@ -116,19 +121,21 @@
 	</div>
 
 	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div id="3" class="textDiv3">
-			<h2>Kinderrad</h2>
-
-			<button class="btn btn-outline-secondary topMargin2" type="button"
-				onclick="bestandsupdate(3)">Ausleihen!</button>
-
+		<div>
+			<div class="textDiv5">
+				<h2>Kinderrad</h2>
+				<button class="btn btn-outline-secondary topMargin2" type="button"
+					onclick="bestandsupdate(3)">Ausleihen!</button>
+			</div>
+			<div id="3" class="textDiv6"></div>
 		</div>
-		<div id="5" class="textDiv3">
-			<h2>E-Bike</h2>
-
-			<button class="btn btn-outline-secondary topMargin2" type="button"
-				onclick="bestandsupdate(5)">Ausleihen!</button>
-
+		<div>
+			<div class="textDiv5">
+				<h2>E-Bike</h2>
+				<button class="btn btn-outline-secondary topMargin2" type="button"
+					onclick="bestandsupdate(5)">Ausleihen!</button>
+			</div>
+			<div id="5" class="textDiv6"></div>
 		</div>
 	</div>
 
@@ -138,12 +145,13 @@
 	</div>
 
 	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<div id="4" class="textDiv3">
-			<h2>Mountainbike</h2>
-
-			<button class="btn btn-outline-secondary topMargin2" type="button"
-				onclick="bestandsupdate(4)">Ausleihen!</button>
-
+		<div>
+			<div class="textDiv5">
+				<h2>Mountainbike</h2>
+				<button class="btn btn-outline-secondary topMargin2" type="button"
+					onclick="bestandsupdate(4)">Ausleihen!</button>
+			</div>
+			<div id="4" class="textDiv6"></div>
 		</div>
 	</div>
 
@@ -182,7 +190,7 @@
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/bestand.html">Unser
+						href="http://localhost/Fahrradverleih_MN/bestand.jsp">Unser
 							Fahrradbestand</a></li>
 				</ul>
 			</div>
@@ -192,7 +200,7 @@
 					<li><a class="text-muted"
 						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/kontakt.html">Impressum</a></li>
+						href="http://localhost/Fahrradverleih_MN/impressum.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>
@@ -200,7 +208,7 @@
 
 	<script src="canvas.js"></script>
 	<script src="bestandupdate.js"></script>
-	<script src="divUpdate.js"></script>
+	<script src="ausleihstorage.js"></script>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"

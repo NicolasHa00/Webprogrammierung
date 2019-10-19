@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['username'])) {
+if (! isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
 }
@@ -50,7 +50,7 @@ if (isset($_GET['logout'])) {
 </head>
 <body>
 
-<nav class="site-header sticky-top py-1">
+	<nav class="site-header sticky-top py-1">
 		<div
 			class="container d-flex flex-column flex-md-row justify-content-between">
 			<a class="lead py-2 d-md-inline-block" href="#">Fahrradverleih MN</a>
@@ -88,51 +88,80 @@ if (isset($_GET['logout'])) {
 						style="stroke:rgb(255,255,255);stroke-width:1" />
 					<ellipse cx="10" cy="10" rx="1.5" ry="0.8"
 						style="fill:url(#grad1);stroke:white;stroke-width:1" />
-				</svg> 
 
-			</a> <a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN">Home</a> <a
-				class="py-2 d-none d-md-inline-block" 
-				href="http://localhost/Fahrradverleih_MN/preise.html">Preise</a> <a
-				class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a>
-			<a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/bestand.html">Bestand</a>
-			<a class="py-2 d-none d-md-inline-block"
-				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a>
-			<a class="py-2 d-none d-md-inline-block"
-				href="/index.php">Abmelden</a>
-		</div>
-	</nav>
 	
-	<div class="bgimg1 height500px">
-		<div class="col-md-5 p-lg-5 mx-auto my-5">
-			<h1 class="display-4 font-weight-normal"><p>Willkommen <strong><?php echo $_SESSION['username']; ?></strong></p></h1>
-			<p class="lead font-weight-normal">Treten sie der Welt des Bikesharing bei!</p>
-			<a class="btn btn-outline-secondary"
-				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
-				<a class="btn btn-outline-secondary"
-				href="index.php?logout='1'" >Abmelden</a>
-		</div>
-	</div>
+		
+
 	
 
 <div class="content">
   	<!-- notification message -->
+
+				</svg> </a> <a class="py-2 d-none d-md-inline-block"
+				href="http://localhost/Fahrradverleih_MN">Home</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="http://localhost/Fahrradverleih_MN/preise.html">Preise</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="http://localhost/Fahrradverleih_MN/verleih.html">Verleih</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="http://localhost/Fahrradverleih_MN/bestand.jsp">Bestand</a> <a
+				class="py-2 d-none d-md-inline-block"
+				href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a> <a
+				class="py-2 d-none d-md-inline-block" href="/index.php">Abmelden</a>
+		</div>
+	</nav>
+
+	<div class="bgimg13 height500px">
+		<div class="col-md-5 p-lg-5 mx-auto my-5">
+			<h1 class="display-4 font-weight-normal">
+				<p>
+					Willkommen <strong><?php echo $_SESSION['username']; ?></strong>
+				</p>
+			</h1>
+			<p class="lead font-weight-normal">Treten Sie der Welt des
+				Bikesharing bei!</p>
+			<a class="btn btn-outline-secondary"
+				href="http://localhost/Fahrradverleih_MN/index.html">Zurück zu Home</a>
+			<a class="btn btn-outline-secondary" href="index.php?logout='1'">Abmelden</a>
+		</div>
+	</div>
+
+
+	<div class="content">
+
   	<?php if (isset($_SESSION['success'])) : ?>
-      <div class="textDiv" >
-      		<p>
-          <?php 
-          	echo $_SESSION['success']; 
-          	unset($_SESSION['success']);
-          ?>
-      	</p>
+      <div class="textDiv">
+      	<?php
+    function createImage()
+    {
+        $ausgabe = $_SESSION['success'];
+        $db = mysqli_connect('localhost', 'root', '', 'fahrradverleih_mn');
+        $sumquery = $db->prepare("SELECT SUM(anzahl) AS value_sum FROM verliehen");
+        $sumquery->execute();
+        $result = $sumquery->get_result();
+        $sum = 0;
+        while($row = $result->fetch_assoc()) {
+          $sum += $row['value_sum'];
+        }
+        $summeverliehen = floatval($sum);
+        $prozentverliehen = floatval((($summeverliehen/50) * 100));
+        $stprozentverliehen = strval($prozentverliehen);
+        $image = imagecreate(1450, 50);
+        $background_color = imagecolorallocate($image, 51, 51, 51);
+        $text_color = imagecolorallocate($image, 255, 255, 255);
+        imagestring($image, 5, 155, 15, $ausgabe . ". Leihe Dir dein Fahrrad schnell aus und beeile dich besser, schon " . $stprozentverliehen . "% unserer Fahrraeder sind verliehen!", $text_color);
+        imagepng($image, "image.png");
+        imagedestroy($image);
+        unset($_SESSION['success']);
+    }
+    createImage();
+    print "<img src=image.png?" . date("U") . ">";
+    ?> 
       </div>
   	<?php endif ?>
-   
 </div>
 
-<footer class="container py-5">
+	<footer class="container py-5">
 		<div class="row">
 			<div class="col-12 col-md">
 				<canvas id="Canvas" width="50" height="50"
@@ -158,7 +187,7 @@ if (isset($_GET['logout'])) {
 				<h5>Bestand</h5>
 				<ul class="list-unstyled text-small">
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/bestand.html">Unser
+						href="http://localhost/Fahrradverleih_MN/bestand.jsp">Unser
 							Fahrradbestand</a></li>
 				</ul>
 			</div>
@@ -168,12 +197,12 @@ if (isset($_GET['logout'])) {
 					<li><a class="text-muted"
 						href="http://localhost/Fahrradverleih_MN/kontakt.html">Kontakt</a></li>
 					<li><a class="text-muted"
-						href="http://localhost/Fahrradverleih_MN/kontakt.html">Impressum</a></li>
+						href="http://localhost/Fahrradverleih_MN/impressum.html">Impressum</a></li>
 				</ul>
 			</div>
 		</div>
 	</footer>
-	
+
 	<script src="canvas.js"></script>
 </body>
 </html>

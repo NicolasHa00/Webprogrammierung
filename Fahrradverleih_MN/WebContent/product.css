@@ -194,6 +194,28 @@
 	border-width: 1px;
 }
 
+.bgimg12 {
+	background-image: url("BestandPicture.jpg");
+	position: relative;
+	overflow: hidden;
+	padding: 2rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bgimg13 {
+	background-image: url("LoginPicture.jpg");
+	position: relative;
+	overflow: hidden;
+	padding: 2rem;
+	margin: 1rem;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .bigDiv {
 	background-color: white;
 	height: 550px;
@@ -227,6 +249,13 @@
 	padding-right: 2rem !important;
 }
 
+.largeMargin2 {
+	margin-bottom: 1rem !important;
+	margin-top: 0rem !important;
+	padding-left: 2rem !important;
+	padding-right: 2rem !important;
+}
+
 .topMargin {
 	margin-top: 0.5rem !important;
 }
@@ -245,6 +274,10 @@
 
 .height500px {
 	height: 500px;
+}
+
+.height300px {
+	height: 300px;
 }
 
 .textDiv {
@@ -270,8 +303,92 @@
 	width: 50%;
 }
 
+.textDiv4 {
+	position: relative;
+	padding: 0rem;
+	margin: 1rem;
+	margin-bottom: 0rem !important;
+	text-align: center;
+}
+
+.textDiv5 {
+	position: relative;
+	padding: 0rem;
+	margin: auto;
+	text-align: center;
+	width: 50%;
+}
+
+.textDiv6 {
+	position: relative;
+	padding: 0rem;
+	margin: auto;
+	margin-top: 1rem !important;
+	text-align: center;
+	width: 50%;
+}
+
 .fontWhite {
 	color: white !important;
+}
+
+.fett {
+	font-weight: bold;
+}
+
+#Bestandstabelle {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#Bestandstabelle td, #Bestandstabelle th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#Bestandstabelle tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#Bestandstabelle tr:hover {
+	background-color: #ddd;
+}
+
+#Bestandstabelle th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #F7BE81;
+	color: white;
+}
+
+ul#verlieheneRaeder {
+	width: 100%;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 0px;
+	list-style-type: none;
+	text-align: center;
+	background-color: #f2f2f2;
+}
+
+ul#verlieheneRaeder li {
+	border-bottom: 1px solid #a9a9a9;
+	padding: 10px;
+	background-color: #f2f2f2;
+}
+
+ul#verlieheneRaeder li:last-child {
+	border-bottom: none;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+ul#verlieheneRaeder li:first-child {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
 }
 
 @import
@@ -458,57 +575,66 @@
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 5px auto; /* 15% from the top and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+	background-color: #fefefe;
+	margin: 5px auto; /* 15% from the top and centered */
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
 .close {
-  /* Position it in the top right corner outside of the modal */
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+	/* Position it in the top right corner outside of the modal */
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
 }
 
 /* Close button on hover */
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
+.close:hover, .close:focus {
+	color: red;
+	cursor: pointer;
 }
 
 /* Add Zoom Animation */
 .animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
 }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
+@
+-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)
 }
 
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
+to {
+	-webkit-transform: scale(1)
+}
+
+}
+@
+keyframes animatezoom {
+	from {transform: scale(0)
+}
+
+to {
+	transform: scale(1)
+}
 }
