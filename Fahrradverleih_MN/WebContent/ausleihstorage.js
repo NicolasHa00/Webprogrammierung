@@ -50,7 +50,7 @@ function fahrradHinzufügen(div) {
 
 	}
 	var value = text;
-	if (value != '') {
+	if (value != "Sie haben bisher kein Fahrrad ausgeliehen!") {
 		var eintragText = {
 			'value' : value
 		};
