@@ -108,7 +108,7 @@
 			<p class="lead font-weight-normal">Informieren Sie sich hier über
 				unsere Preismodelle</p>
 			<a class="btn btn-outline-secondary"
-				href="http://localhost:8080/Fahrradverleih_MN/verleih.html">Zum
+				href="http://localhost/Fahrradverleih_MN_PHP/verleih.php">Zum
 				Verleih</a>
 		</div>
 	</div>

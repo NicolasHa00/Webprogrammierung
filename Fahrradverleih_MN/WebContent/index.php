@@ -94,7 +94,7 @@
 				des Fahrradleasings und erleben Sie unkomplizierte, flexible
 				Fahrradvermietung zu unschlagbaren Preisen!</p>
 			<a class="btn btn-outline-secondary"
-				href="http://localhost/Fahrradverleih_MN/preise.html">Unser
+				href="http://localhost/Fahrradverleih_MN_PHP/preise.php">Unser
 				Portfolio</a>
 		</div>
 	</div>
